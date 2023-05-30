@@ -4,11 +4,11 @@ Nextail is thinking about expanding its business and not only forecast sales in 
 also manage the cash register. The first store where we will introduce our software will sell the
 following 3 products.
 
-|CODE   ||NAME         |PRICE |
---------|--------------|------|
-|VOUCHER|Gift Card     |5.00€ |
-|TSHIRT |Summer T-Shirt|20.00€|
-|PANTS  |Summer Pants  |7.50€ |
+| CODE    | NAME           | PRICE  |
+|---------|----------------|--------|
+| VOUCHER | Gift Card      | 5.00€  |
+| TSHIRT  | Summer T-Shirt | 20.00€ |
+| PANTS   | Summer Pants   | 7.50€  |
 
 
 The different departments have agreed the following discounts:
