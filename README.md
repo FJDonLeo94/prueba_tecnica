@@ -1,4 +1,4 @@
-#Backend Exercise
+# Backend Exercise
 
 Nextail is thinking about expanding its business and not only forecast sales in the stores but
 also manage the cash register. The first store where we will introduce our software will sell the
