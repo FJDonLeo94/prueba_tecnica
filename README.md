@@ -5,7 +5,7 @@ also manage the cash register. The first store where we will introduce our softw
 following 3 products.
 
 |CODE   ||NAME         |PRICE |
---------|---------     |------|
+--------|--------------|------|
 |VOUCHER|Gift Card     |5.00€ |
 |TSHIRT |Summer T-Shirt|20.00€|
 |PANTS  |Summer Pants  |7.50€ |
