@@ -1,7 +1,7 @@
 import json
 #Here we obtain the data from de json in a dict shape
 def get_products():
-    file = open("prueba_tecnica_nextail\products.json")
+    file = open("products.json")
     data = json.load(file)
     return data
 
