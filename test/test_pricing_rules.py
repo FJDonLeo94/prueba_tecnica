@@ -1,6 +1,8 @@
 import unittest
 from pricing_rules import PricingRules
 
+
+
 class TestPricingRules(unittest.TestCase):
     def setUp(self):
         self.pricing_rules = PricingRules()
