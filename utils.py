@@ -6,6 +6,10 @@ def get_products():
     return data
 
 #Here we create a function to count all the products in the input
+def lower_to_upper(input):
+    upper_list = (map(lambda x: x.upper(), input))
+    return list(upper_list)
+
 
 def count_product(product, shopp_car):
     z0 = 0
@@ -13,4 +17,3 @@ def count_product(product, shopp_car):
         if product == shopp_car[i]:
             z0 = z0 + 1 
     return z0
-

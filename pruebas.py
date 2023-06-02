@@ -16,4 +16,3 @@ input_components = [
 output_component = gr.outputs.Label(label="El precio asciende a")
 '''
 
-

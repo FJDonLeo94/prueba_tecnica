@@ -1,11 +1,14 @@
 # Import functions and class
 
 from checkout import Checkout
-from utils import get_products, count_product
+from utils import get_products, count_product, lower_to_upper
 from pricing_rules import PricingRules
 
-# Using one list to work with
-items_list = ('VOUCHER', 'TSHIRT', 'VOUCHER', 'VOUCHER', 'PANTS', 'TSHIRT', 'TSHIRT', 'TSHIRT', 'TSHIRT', 'TSHIRT', 'VOUCHER', 'TSHIRT', 'VOUCHER', 'TSHIRT', 'PANTS', 'TSHIRT', 'VOUCHER', 'VOUCHER', 'PANTS', 'TSHIRT')
+# Using one list to work with and transforming the lowercase letters to uppercase to match the inventory list.
+item_input = ('VOUCHER', 'TSHIRT', 'voucher', 'VOUCHER', 'PANTS', 'TSHIRT', 'TSHIRT', 'TSHIRT', 'TSHIRT', 'TSHIRT', 'VOUCHER', 'TSHIRT', 'VOUCHER', 'TSHIRT', 'PANTS', 'TSHIRT', 'VOUCHER', 'VOUCHER', 'PANTS', 'TSHIRT')
+items_list = lower_to_upper(item_input)
+print(items_list)
+
 
 # Creating the objects, using the pricing_rules in the checkout constructor to calculate the total cost 
 pricing_rules = PricingRules()
@@ -23,12 +26,12 @@ for each in items_list:
 # Printing the list of items and the total amount.
 print(f"""  
       
-      The price for:
+    The price for:
       
-    - {count_product('VOUCHER', items_list)} Gift Card, 
-    - {count_product('TSHIRT', items_list)} Summer T-Shirt and 
-    - {count_product('PANTS', items_list)} Summer Pants are:
+    - {count_product('VOUCHER', items_list)} Gift Cards, 
+    - {count_product('TSHIRT', items_list)} Summer T-Shirts and 
+    - {count_product('PANTS', items_list)} Summer Pants
     
-        {checkout.calculate_total(checkout.get_car(), inventory)} dollars
+    is: {checkout.total_without_offers(checkout.get_cart(), inventory)} dollars without the offers, with offers is: {checkout.calculate_total(checkout.get_cart(), inventory)} dollars
     
     """)
