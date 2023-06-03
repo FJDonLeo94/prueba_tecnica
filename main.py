@@ -32,6 +32,6 @@ print(f"""
     - {count_product('TSHIRT', items_list)} Summer T-Shirts and 
     - {count_product('PANTS', items_list)} Summer Pants
     
-    is: {checkout.total_without_offers(checkout.get_cart(), inventory)} dollars without the offers, with offers is: {checkout.calculate_total(checkout.get_cart(), inventory)} dollars
+    is: {checkout.total_without_offers(inventory)} dollars without the offers, with offers is: {checkout.calculate_total(inventory)} dollars
     
     """)

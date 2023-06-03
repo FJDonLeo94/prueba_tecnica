@@ -39,7 +39,7 @@ class TestCheckout(unittest.TestCase):
         try:
             for item in self.items_list:
                 self.checkout.scan(item, self.inventory)
-            total_without_offers = self.checkout.total_without_offers(self.checkout.get_cart(), self.inventory)
+            total_without_offers = self.checkout.total_without_offers(self.inventory)
             self.assertEqual(total_without_offers, 257.5)
             print("test_total_without_offers OK")
         except AssertionError:
@@ -49,7 +49,7 @@ class TestCheckout(unittest.TestCase):
         try:
             for item in self.items_list:
                 self.checkout.scan(item, self.inventory)
-            total = self.checkout.calculate_total(self.checkout.get_cart(), self.inventory)
+            total = self.checkout.calculate_total(self.inventory)
             self.assertEqual(total, 232.5)
             print("test_calculate_total OK")
         except AssertionError:
@@ -57,4 +57,3 @@ class TestCheckout(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
