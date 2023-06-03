@@ -5,8 +5,6 @@
 from utils import count_product
 
 class PricingRules:
-    def __init__(self):
-        self.discount_strategies = {}
     
     # Count the product and with two / / the number is always the lower int, so if you buy one 1 // 2 is 0    
     def twoforone (self, item, shop_car, total):

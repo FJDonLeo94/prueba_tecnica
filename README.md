@@ -1,5 +1,8 @@
 # Backend Exercise
 
+## Statement
+
+
 Nextail is thinking about expanding its business and not only forecast sales in the stores but
 also manage the cash register. The first store where we will introduce our software will sell the
 following 3 products.
@@ -25,3 +28,6 @@ Examples:
 * Items: VOUCHER, TSHIRT, VOUCHER - Total: 25.00€
 * Items: TSHIRT, TSHIRT, TSHIRT, VOUCHER, TSHIRT - Total: 81.00€
 * Items: VOUCHER, TSHIRT, VOUCHER, VOUCHER, PANTS, TSHIRT, TSHIRT - Total: 74.50€
+
+
+## How to use
