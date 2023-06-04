@@ -1,7 +1,20 @@
 # Backend Exercise
 
-## Statement
 
+## How to use
+
+In this program, I used gradio to create a UI that allows to see the backend working in a little demo.
+
+First of all, from the root folder, run ``pip install requirements.txt`` to install gradio, as it is the only external library that is not included in Python.
+
+To run the unit tests, you can execute ``python test_runner.py``. There is one test for every function in the program. To run a specific test, you can use ``python -m unittest test/file.py``
+
+To run the program, you should execute ``python app_gradio``, and if a window doesn´t open, click the ip from the terminal.
+
+
+
+
+## Statement
 
 Nextail is thinking about expanding its business and not only forecast sales in the stores but
 also manage the cash register. The first store where we will introduce our software will sell the
@@ -29,5 +42,3 @@ Examples:
 * Items: TSHIRT, TSHIRT, TSHIRT, VOUCHER, TSHIRT - Total: 81.00€
 * Items: VOUCHER, TSHIRT, VOUCHER, VOUCHER, PANTS, TSHIRT, TSHIRT - Total: 74.50€
 
-
-## How to use
