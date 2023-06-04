@@ -7,9 +7,10 @@ In this program, I used gradio to create a UI that allows to see the backend wor
 
 First of all, from the root folder, run ``pip install requirements.txt`` to install gradio, as it is the only external library that is not included in Python.
 
-To run the unit tests, you can execute ``python test_runner.py``. There is one test for every function in the program. To run a specific test, you can use ``python -m unittest test/file.py``
+To run the unit tests, you can execute ``python test_runner.py``. There is one test for every function in the program.
+To run a specific test, you can use ``python -m unittest test/file.py``
 
-To run the program, you should execute ``python app_gradio``, and if a window doesn´t open, click the ip from the terminal.
+To run the program, you should execute ``python app_gradio.py``, and if a window doesn´t open, click the ip from the terminal.
 
 
 
