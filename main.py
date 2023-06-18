@@ -47,11 +47,11 @@ inventory = get_products()
 for each in items_list:
     checkout.scan(each, inventory)
     if each == 'VOUCHER':
-        z_voucher = z_voucher + 1
+        z_voucher += 1
     elif each == 'TSHIRT':
-        z_tshirt = z_tshirt + 1
+        z_tshirt += 1
     elif each == 'PANTS':
-        z_pants = z_pants + 1
+        z_pants += 1
         
 
 
