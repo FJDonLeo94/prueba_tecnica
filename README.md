@@ -1,5 +1,17 @@
 # Backend Exercise
 
+
+## How to use
+
+This is my solution for the backend exercise.
+
+To run the unit tests, you can execute ``python test_runner.py``. There is one test for every function in the program. To run a specific test, you can use ``python -m unittest test/file.py``
+
+To run the program, you should execute ``python main.py``
+
+
+## Statement
+
 Nextail is thinking about expanding its business and not only forecast sales in the stores but
 also manage the cash register. The first store where we will introduce our software will sell the
 following 3 products.
