@@ -4,6 +4,9 @@ from checkout import Checkout
 from utils import get_products, count_product, lower_to_upper
 from pricing_rules import PricingRules
 
+z_pants = 0
+z_tshirt = 0
+z_voucher = 0
 
 
 # Using one list to work with and transforming the lowercase letters to uppercase to match the inventory list.
@@ -44,11 +47,11 @@ inventory = get_products()
 for each in items_list:
     checkout.scan(each, inventory)
     if each == 'VOUCHER':
-        z_voucher = count_product('VOUCHER', items_list)
+        z_voucher = z_voucher + 1
     elif each == 'TSHIRT':
-        z_tshirt = count_product('TSHIRT', items_list)
+        z_tshirt = z_tshirt + 1
     elif each == 'PANTS':
-        z_pants = count_product('PANTS', items_list)
+        z_pants = z_pants + 1
         
 
 
