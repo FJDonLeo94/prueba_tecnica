@@ -11,49 +11,37 @@ class TestCheckout(unittest.TestCase):
         self.items_list = ('VOUCHER', 'TSHIRT', 'VOUCHER', 'VOUCHER', 'PANTS', 'TSHIRT', 'TSHIRT', 'TSHIRT', 'TSHIRT', 'TSHIRT', 'VOUCHER', 'TSHIRT', 'VOUCHER', 'TSHIRT', 'PANTS', 'TSHIRT', 'VOUCHER', 'VOUCHER', 'PANTS', 'TSHIRT')
 
     def test_scan_valid_item(self):
-        try:
-            self.checkout.scan('VOUCHER', self.inventory)
-            self.assertEqual(self.checkout.get_cart(), ['VOUCHER'])
-            print("test_scan_valid_item OK")
-        except AssertionError:
-            print("test_scan_valid_item FAIL")
+        
+        self.checkout.scan('VOUCHER', self.inventory)
+        self.assertEqual(self.checkout.get_cart(), ['VOUCHER'])
 
     def test_scan_invalid_item(self):
-        try:
-            self.checkout.scan('INVALID', self.inventory)
-            self.assertEqual(self.checkout.get_cart(), [])
-            print("test_scan_invalid_item OK")
-        except AssertionError:
-            print("test_scan_invalid_item FAIL")
+
+        self.checkout.scan('INVALID', self.inventory)
+        self.assertEqual(self.checkout.get_cart(), [])
 
     def test_get_cart(self):
-        try:
-            for item in self.items_list:
-                self.checkout.scan(item, self.inventory)
-            self.assertEqual(self.checkout.get_cart(), ['VOUCHER', 'TSHIRT', 'VOUCHER', 'VOUCHER', 'PANTS', 'TSHIRT', 'TSHIRT', 'TSHIRT', 'TSHIRT', 'TSHIRT', 'VOUCHER', 'TSHIRT', 'VOUCHER', 'TSHIRT', 'PANTS', 'TSHIRT', 'VOUCHER', 'VOUCHER', 'PANTS', 'TSHIRT'])
-            print("test_get_cart OK")
-        except AssertionError:
-            print("test_get_cart FAIL")
+
+        for item in self.items_list:
+            self.checkout.scan(item, self.inventory)
+        self.assertEqual(self.checkout.get_cart(), ['VOUCHER', 'TSHIRT', 'VOUCHER', 'VOUCHER', 'PANTS', 'TSHIRT', 'TSHIRT', 'TSHIRT', 'TSHIRT', 'TSHIRT', 'VOUCHER', 'TSHIRT', 'VOUCHER', 'TSHIRT', 'PANTS', 'TSHIRT', 'VOUCHER', 'VOUCHER', 'PANTS', 'TSHIRT'])
+
 
     def test_total_without_offers(self):
-        try:
-            for item in self.items_list:
-                self.checkout.scan(item, self.inventory)
-            total_without_offers = self.checkout.total_without_offers(self.inventory)
-            self.assertEqual(total_without_offers, 257.5)
-            print("test_total_without_offers OK")
-        except AssertionError:
-            print("test_total_without_offers FAIL")
+
+        for item in self.items_list:
+            self.checkout.scan(item, self.inventory)
+        total_without_offers = self.checkout.total_without_offers(self.inventory)
+        self.assertEqual(total_without_offers, 257.5)
+    
 
     def test_calculate_total(self):
-        try:
-            for item in self.items_list:
-                self.checkout.scan(item, self.inventory)
-            total = self.checkout.calculate_total(self.inventory)
-            self.assertEqual(total, 232.5)
-            print("test_calculate_total OK")
-        except AssertionError:
-            print("test_calculate_total FAIL")
+        
+        for item in self.items_list:
+            self.checkout.scan(item, self.inventory)
+        total = self.checkout.calculate_total(self.inventory)
+        self.assertEqual(total, 232.5)
+            
 
 if __name__ == '__main__':
     unittest.main()

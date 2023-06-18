@@ -6,4 +6,5 @@ from test.test_pricing_rules import TestPricingRules
 #This file is for run the test, instead of execute the tests one by one with this file you execute all the test together.
 
 if __name__ == '__main__':
-    unittest.main()
+    runner = unittest.TextTestRunner()
+    runner.run(unittest.main())

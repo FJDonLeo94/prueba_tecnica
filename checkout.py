@@ -8,12 +8,6 @@ class Checkout:
     def scan(self, product, inventory):
         if product in inventory:
             self.items.append(product)
-        else:
-            print(f"""
-                  
-        ⚠          {product} is not available
-                  
-                  """)
         return self.items
     
     # This is only to get the complete list without arguments and use it in the code
