@@ -1,5 +1,6 @@
 import unittest
 from pricing_rules import PricingRules
+from offer_product_selection import product_2x1, product_3_19
 
 
 
@@ -25,7 +26,7 @@ class TestPricingRules(unittest.TestCase):
         
         shop_car = ['VOUCHER', 'VOUCHER', 'VOUCHER']
         total = 15.00  # Total without discount: 15.00
-        total_with_discount = self.pricing_rules.twoforone(self.inventory, shop_car, total)
+        total_with_discount = self.pricing_rules.twoforone(self.inventory, product_2x1, shop_car, total)
         self.assertEqual(total_with_discount, 10.00)  # Total with 2-for-1 discount: 10.00
 
 
@@ -33,7 +34,7 @@ class TestPricingRules(unittest.TestCase):
  
         shop_car = ['TSHIRT', 'TSHIRT', 'TSHIRT', 'TSHIRT']
         total = 80.00  # Total without discount: 80.00
-        total_with_discount = self.pricing_rules.three_nineteen(shop_car, total)
+        total_with_discount = self.pricing_rules.three_nineteen(product_3_19, shop_car, total)
         self.assertEqual(total_with_discount, 76)  # Total with 4-for-19 discount: 76.00
 
             
@@ -41,8 +42,8 @@ class TestPricingRules(unittest.TestCase):
         
         shop_car = ['VOUCHER', 'TSHIRT', 'PANTS']
         total = 32.50  # Total without discount: 32.50
-        total_with_discount = self.pricing_rules.twoforone(self.inventory, shop_car, total)
-        total_with_discount = self.pricing_rules.three_nineteen(shop_car, total_with_discount)
+        total_with_discount = self.pricing_rules.twoforone(self.inventory, product_2x1, shop_car, total)
+        total_with_discount = self.pricing_rules.three_nineteen(product_3_19, shop_car, total_with_discount)
         self.assertEqual(total_with_discount, 32.50)  # No discount applied, total remains the same
 
 if __name__ == '__main__':

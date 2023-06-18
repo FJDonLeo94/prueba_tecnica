@@ -4,6 +4,8 @@ from checkout import Checkout
 from utils import get_products, count_product, lower_to_upper
 from pricing_rules import PricingRules
 
+
+
 # Using one list to work with and transforming the lowercase letters to uppercase to match the inventory list.
 item_input = (
     "VOUCHER",
@@ -41,6 +43,13 @@ inventory = get_products()
 # Scanning the list item one item at a time
 for each in items_list:
     checkout.scan(each, inventory)
+    if each == 'VOUCHER':
+        z_voucher = count_product('VOUCHER', items_list)
+    elif each == 'TSHIRT':
+        z_tshirt = count_product('TSHIRT', items_list)
+    elif each == 'PANTS':
+        z_pants = count_product('PANTS', items_list)
+        
 
 
 # Printing the list of items and the total amount.
@@ -49,9 +58,9 @@ print(
       
     The price for:
       
-    - {count_product('VOUCHER', items_list)} Gift Cards, 
-    - {count_product('TSHIRT', items_list)} Summer T-Shirts and 
-    - {count_product('PANTS', items_list)} Summer Pants
+    - {z_voucher} Gift Cards, 
+    - {z_tshirt} Summer T-Shirts and 
+    - {z_pants} Summer Pants
     
     is: {checkout.total_without_offers(inventory)} dollars without the offers, with offers is: {checkout.calculate_total(inventory)} dollars
     

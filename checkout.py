@@ -1,3 +1,5 @@
+from offer_product_selection import product_2x1, product_3_19
+
 class Checkout:
     def __init__(self, pricing_rules):
         self.pricing_rules = pricing_rules
@@ -28,7 +30,7 @@ class Checkout:
         total = self.total_without_offers(inventory)
                 
         # Apply the special price rules to substract the offer from the total
-        total = self.pricing_rules.twoforone(inventory, self.get_cart(), total)
-        total = self.pricing_rules.three_nineteen(self.get_cart(), total)
+        total = self.pricing_rules.twoforone(inventory, product_2x1, self.get_cart(), total)
+        total = self.pricing_rules.three_nineteen(product_3_19, self.get_cart(), total)
         return total
     

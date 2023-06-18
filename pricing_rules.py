@@ -7,19 +7,19 @@ from utils import count_product
 class PricingRules:
     
     # Count the product and with two / / the number is always the lower int, so if you buy one 1 // 2 is 0    
-    def twoforone (self, item, shop_car, total):
-        voucher_count = count_product("VOUCHER", shop_car)
-        discount_amount = (voucher_count // 2) * item["VOUCHER"]["price"]
+    def twoforone (self, item, product,shop_car, total):
+        product_count = count_product(product, shop_car)
+        discount_amount = (product_count // 2) * item[product]["price"]
         
         
         return total - discount_amount
     
         
-    def three_nineteen (self,  shop_car, total):
+    def three_nineteen (self, product, shop_car, total):
         
-        tshirt_count = count_product("TSHIRT", shop_car)
-        if tshirt_count >= 3:
-            discount_amount = tshirt_count
+        product_count = count_product(product, shop_car)
+        if product_count >= 3:
+            discount_amount = product_count
         
         else:
             discount_amount = 0    
