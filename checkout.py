@@ -1,4 +1,5 @@
-from offer_product_selection import product_2x1, product_3_19
+import json
+
 
 class Checkout:
     def __init__(self, pricing_rules):
@@ -25,12 +26,21 @@ class Checkout:
         return total_wo_offers
     
     def calculate_total(self, inventory):
+        # Read the JSON
+        with open('prueba_tecnica_nextail\offers.json') as f:
+            datos = json.load(f)
+
+        # Extract the values from the JSON
+        product_2x1 = datos['productV']
+        offer2x1 = datos['offer2x1']
+        product_3_19 = datos['productT']
+        offer3_19 = datos['offer3_19']
 
         # Calculate the total without offers, the, in case that are offers we can just substract it from the total
         total = self.total_without_offers(inventory)
                 
         # Apply the special price rules to substract the offer from the total
-        total = self.pricing_rules.twoforone(inventory, product_2x1, self.get_cart(), total)
-        total = self.pricing_rules.three_nineteen(product_3_19, self.get_cart(), total)
+        total = self.pricing_rules.twoforone(inventory, product_2x1, offer2x1, self.get_cart(), total)
+        total = self.pricing_rules.three_nineteen(product_3_19, offer3_19, self.get_cart(), total)
         return total
     
