@@ -1,7 +1,7 @@
 # Import functions and class
 
 from checkout import Checkout
-from utils import get_products, count_product, lower_to_upper
+from utils import get_products, lower_to_upper
 from pricing_rules import PricingRules
 
 z_pants = 0

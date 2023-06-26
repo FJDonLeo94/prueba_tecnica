@@ -1,0 +1,14 @@
+{
+   "VOUCHER": {
+      "name": "Gift Card",
+      "price": 5.0
+   },
+   "TSHIRT": {
+      "name": "Summer T-Shirt",
+      "price": 20.0
+   },
+   "PANTS": {
+      "name": "Summer Pants",
+      "price": 7.5
+   }
+}

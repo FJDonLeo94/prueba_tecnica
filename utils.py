@@ -1,8 +1,8 @@
 import json
 #Here we obtain the data from de json in a dict shape
 def get_products():
-    file = open("prueba_tecnica_nextail\products.json")
-    data = json.load(file)
+    with open('jsonfiles\products.json') as f:
+        data = json.load(f)
     return data
 
 #Here we create a function to count all the products in the input

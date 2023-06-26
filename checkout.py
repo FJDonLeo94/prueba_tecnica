@@ -27,7 +27,7 @@ class Checkout:
     
     def calculate_total(self, inventory):
         # Read the JSON
-        with open('prueba_tecnica_nextail\offers.json') as f:
+        with open('jsonfiles\offers.json') as f:
             datos = json.load(f)
 
         # Extract the values from the JSON
