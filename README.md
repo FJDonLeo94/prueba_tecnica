@@ -17,8 +17,7 @@ To run the program, you should execute ``python app_gradio.py``, and if a window
 
 ## Statement
 
-Nextail is thinking about expanding its business and not only forecast sales in the stores but
-also manage the cash register. The first store where we will introduce our software will sell the
+The first store where we will introduce our software will sell the
 following 3 products.
 
 | CODE    | NAME           | PRICE  |
